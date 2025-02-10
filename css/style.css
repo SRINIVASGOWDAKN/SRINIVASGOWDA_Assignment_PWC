@@ -1,0 +1,662 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-custom {
+  background-color: #000 !important;
+  padding: 10px 20px;
+}
+
+.search-box {
+  background-color: #ddd;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 250px;
+  font-family: "Poppins", sans-serif;
+}
+
+.user-initials {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid white;
+  color: white;
+  font-weight: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 0 14px;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 18px;
+  padding-left: 30px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.d-flex.align-items-center > span.icon > i {
+  padding-right: 2px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #ddd;
+  padding: 2px 0 0 10px;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-icon {
+  transform: scaleX(-1);
+  /* Flips the icon horizontally */
+  display: inline-block;
+  /* Ensures the transformation applies correctly */
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex-grow: 1;
+  font-size: 16px;
+  color: black;
+}
+
+.d-flex.align-items-center.ms-auto.mt-2.mt-lg-0 > span:nth-child(2) {
+  margin: 0 0 0 20px;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+/* Main header container */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 30px 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Left section: Interview Layout */
+.left-section {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Middle section: Home */
+.middle-section {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 100px;
+}
+
+.middle-section a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  position: relative;
+  font-weight: normal;
+}
+
+/* Orange underline for Home */
+.middle-section a.active::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 2px;
+  background-image: url(../images/Rectangle\ 1320.png);
+  margin-top: 3px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Right section: Not following & Share */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+}
+
+.right-section i {
+  color: #d67f30;
+}
+
+.right-section a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+/* Banner Container */
+.banner {
+  width: 100%;
+  height: 250px;
+  /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background: url("https://via.placeholder.com/1600x500") no-repeat center
+    center;
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+
+/* Dark Overlay */
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/Group\ 34579.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/* Content Container */
+.banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 400px;
+  margin-left: 150px;
+}
+
+/* OnePwC Styling */
+.banner-title {
+  font-size: 90px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  line-height: 94px;
+}
+
+.banner-title span:first-child {
+  color: rgb(207, 62, 18);
+  /* "One" */
+  font-weight: normal;
+}
+
+.banner-title span:last-child {
+  color: white;
+  /* "PwC" */
+}
+
+/* Yellow Box */
+.yellow-box {
+  background-color: #f7a600;
+  padding: 10px 250px 10px 10px;
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Hexagonal Background */
+.hexagon-pattern {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 400px;
+  height: 100%;
+  background: url("https://via.placeholder.com/400x250") no-repeat center;
+  background-size: cover;
+}
+/* Section Container */
+.hexagon-section {
+  width: 100%;
+  background: url("../images/Group\ 34800.png") no-repeat center;
+  background-size: cover;
+  padding: 70px 20px 70px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Image Box */
+.image-container {
+  flex: 1;
+  max-width: 300px;
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+/* Content Box */
+.content-container {
+  flex: 2;
+  padding-left: 60px;
+  color: #000;
+}
+
+/* Title */
+.content-title {
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.content-title span {
+  color: #d4620e;
+}
+
+/* loicon*/
+.loicon {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  background: url("../images/Group\ 34893.png") no-repeat center;
+  background-size: cover;
+}
+
+/* Paragraph */
+.content-container p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Bold Text */
+.bold-text {
+  font-weight: bold;
+  margin-top: 10px;
+}
+/* layout1Header Section */
+.layout1header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background: #111
+    url("../images/Group\ 34880.png")
+    no-repeat right;
+  background-size: contain;
+  padding: 0 20px;
+}
+
+/* layout1Logo and Title */
+.layout1logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.layout1logo {
+  width: 60px;
+  height: 60px;
+  background: url("../images/Group\ 34881.png") no-repeat center;
+  background-size: contain;
+  margin-left: 150px;
+  margin-right: 10px;
+}
+
+.layout1header-title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Center-Aligned Hexagon Container */
+.hexagon-container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 0 20px 0;
+}
+
+/* Individual Hexagon */
+.hexagon {
+  width: 184px;
+  height: 206px;
+  background: url("../images/Path\ 59630.png") no-repeat center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+.hexagon-container > div:nth-child(1){
+  /* background: url("../images/Path\ 59648.png") no-repeat center; */
+  background: url("../images/Path\ 59630.png") no-repeat center;
+  background-size: cover;
+}
+.hexagon-container > div:nth-child(8){
+  /* background: url("../images/Path\ 59648.png") no-repeat center; */
+  background: url("../images/Path\ 59630.png") no-repeat center;
+  background-size: cover;
+}
+/* Keep Text and Background Always Visible */
+.hexagon .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../images/Group\ 34810.png") no-repeat center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hexagon .button {
+  position: absolute;
+  bottom: 15px;
+  width: 30px;
+  height: 30px;
+  background: url("../images/UpCircle.png") no-repeat center;
+  background-size: contain;
+  transition: background 0.3s ease-in-out;
+}
+/* Hover Effect */
+.hexagon:hover {
+  transform: scale(1.1);
+}
+.hexagon h3:hover {
+  color: #d04a02;
+}
+.hexagon p:hover {
+  color: #d8b113;
+}
+/* Text Styling */
+.hexagon h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.hexagon p {
+  font-size: 14px;
+  color: #d4620e;
+  transition: color 0.3s ease-in-out;
+}
+ /* Grid Layout */
+ .grid-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Card Style */
+.lay2card {
+  width: 200px;
+  height: 250px;
+  background: url("../images/Group\ 34864.png") no-repeat center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 15px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+body > div.grid-container > div:nth-child(2), body > div.grid-container > div:nth-child(4) {
+  background: #e8b20a;
+}
+/* Hover Effect */
+.lay2card:hover {
+  transform: scale(1.05);
+}
+
+/* Arrow Button */
+.arrow-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: url("../images/UpCircle-1.png") no-repeat center;
+  background-size: contain;
+
+}
+ /* Grid Layout */
+ .team-grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin: 20px 0 20px 0;
+}
+
+/* Card Style */
+.team-card {
+  width: 200px;
+  overflow: hidden;
+  padding: 0px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+}
+
+/* Image Styling */
+.team-card img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+  background: #333;
+}
+
+/* Text Styling */
+.team-card h3 {
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.team-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.team-card .designation {
+  font-weight: bold;
+  color: #d35400;
+}
+
+/* Bottom Border Line */
+.team-card .underline {
+  width: 200px;
+  height: 3px;
+  background: url("../images/Rectangle\ 16396.png") no-repeat center;
+  background-size: cover;
+  margin-top: 8px;
+}
+.team-grid > div:nth-child(2) > div,.team-grid > div:nth-child(4) > div{
+  background: url("../images/Rectangle\ 16397.png") no-repeat center;
+  background-size: cover;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .search-box {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .middle-section {
+    justify-content: center;
+    /* Center "Home" on smaller screens */
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .right-section {
+    justify-content: center;
+    margin-top: 10px;
+    grid-gap: 150px;
+  }
+
+  .banner {
+    padding: 20px;
+  }
+
+  .banner-title {
+    font-size: 52px;
+    line-height: 56px;
+  }
+
+  .yellow-box {
+    font-size: 14px;
+    padding: 6px 60px;
+  }
+
+  .banner-content {
+    margin-left: 20px;
+  }
+
+  .hexagon-pattern {
+    width: 250px;
+    height: 120px;
+  }
+
+  .hexagon-section {
+    padding: 40px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-title {
+    font-size: 24px;
+  }
+
+  .loicon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .content-container p {
+    font-size: 14px;
+  }
+  .image-container {
+    margin: 0 0 20px 0;
+    max-width: 200px;
+  }
+  .content-container {
+    padding: 0;
+  }
+  .layout1header {
+    height: 50px;
+    padding: 0 15px;
+    background-size: cover;
+  }
+
+  .layout1header-title {
+    font-size: 16px;
+  }
+
+  .layout1logo {
+    width: 40px;
+    height: 40px;
+    margin: 0 6px 0 0px;
+  }
+  .hexagon-container {
+    max-width: 100%;
+  }
+
+  .hexagon {
+    width: 120px;
+    height: 50px;
+    background-size: contain;
+}
+.hexagon-container > div:nth-child(1),.hexagon-container > div:nth-child(8){
+  background-size: contain;
+}
+  .hexagon h3 {
+    font-size: 7px;
+    margin: 10px 0 1px 0;
+}
+  .hexagon .button {
+    width: 8px;
+    height: 12px;
+    bottom: 4px;
+}
+.hexagon p{
+  font-size: 7px;
+  }
+  .hexagon .overlay{
+    background-size: 40% 60%;
+  }
+  .grid-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.lay2card {
+    width: 90%;
+    max-width: 250px;
+}
+.team-grid {
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-card {
+  width: 90%;
+  max-width: 250px;
+}
+.team-card img{
+  width: 250px;
+  height: 216px;
+}
+}
+@media (max-width: 1000px){
+
+}
+@media (max-width: 400px){
+
+}
